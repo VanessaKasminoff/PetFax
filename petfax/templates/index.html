@@ -6,10 +6,18 @@
     <title>PetFax</title>
 </head>
 <body>
-    <h1>Welcome to PetFax!</h1>
-    {% for pet in pets %}
-        <h2>{{ pet.pet_name }}</h2>
-        <img src="{{pet.pet_photo}}" alt="Photo of pet" />
-    {% endfor %}
+    <div class="return-home-bar">
+        <a href="/">PetFax</a>
+    </div>
+    <h1>Our animals available for adoption</h1>
+    <div class="pets-container">
+        {% for pet in pets %}
+            <div class="pet-card">
+                <img src="{{pet.pet_photo}}" alt="Photo of pet" />
+                <p>{{ pet.pet_name }}</p>
+                <p>{{ pet.pet_fact }}</p>
+            </div>
+        {% endfor %}
+    </div>
 </body>
 </html>
