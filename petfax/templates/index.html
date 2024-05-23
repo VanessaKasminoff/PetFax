@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetFax</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/>
 </head>
 <body>
     <div class="return-home-bar">
@@ -13,7 +14,7 @@
     <div class="pets-container">
         {% for pet in pets %}
             <div class="pet-card">
-                <img src="{{pet.pet_photo}}" alt="Photo of pet" />
+                <img class="pet-img" src="{{pet.pet_photo}}" alt="Photo of pet" />
                 <p>{{ pet.pet_name }}</p>
                 <p>{{ pet.pet_fact }}</p>
             </div>

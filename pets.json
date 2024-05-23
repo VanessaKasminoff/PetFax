@@ -14,5 +14,10 @@
         "pet_name": "Max",
         "pet_photo": "https://raw.githubusercontent.com/HackerUSA-CE/petfax-app/main/assets/karsten-winegeart-5PVXkqt2s9k-unsplash.jpg?token=AGGJTZZBBZGP6TBRXXCLNDLBIJXHU",
         "pet_fact": "A dog’s nose print is unique, much like a person’s fingerprint"
+    },{
+        "pet_id": 4,
+        "pet_name": "Goober",
+        "pet_photo": "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "pet_fact": "Mice teeth never stop growing. Specifically, their two front teeth. They need to chew on materials to keep them from growing too long."
     }
 ]

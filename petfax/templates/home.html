@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PetFax</title>
-</head>
-<body>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  </head>
+  <body>
     <div class="header">
-        <h1>Every paw deserves a home</h1>
+      <h1>Every paw deserves a home</h1>
+      <img
+        src="https://images.unsplash.com/photo-1471874276752-65e2d717604a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Cat laying down"
+      />
+      <!-- Photo by <a href="https://unsplash.com/@ejleusink?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Erik-Jan Leusink</a> on <a href="https://unsplash.com/photos/brown-and-black-tabby-cat-lying-on-gray-cushion-tzzpfLiRPlA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
     </div>
     <div class="info-container">
-        <h2>Your new best friend is waiting!</h2>
-        <p>At PetFax, we're committed to providing you with detailed information about every animal in our shelter. 
-            We hope you'll find the purrfect pet to love and adore. Remember, every adoption saves a life.</p>
+      <h2>Your new best friend is waiting!</h2>
+      <p>
+        At PetFax, we're committed to providing you with detailed information
+        about every animal in our shelter. We hope you'll find the purrfect pet
+        to love and adore. Remember, every adoption saves a life.
+      </p>
     </div>
     <div class="pets-container">
-        <h2>Our Animals</h2>
-        {% for pet in pets %}
-            <div class="pet-card">
-                <img src="{{pet.pet_photo}}" alt="Photo of pet" />
-                <p>{{ pet.pet_name }}</p>
-                <a href="/pets">Learn more</a>
-            </div>
-        {% endfor %}
-        <div class="fun-facts-container">
-            <h2>Check out these fun animal facts</h2>
-            <a href="/facts"><button>Facts</button></a>
-        </div>
-        <div class="fun-fact-submit-container">
-            <h2>Have an animal fun fact you'd like to share with us?</h2>
-            <a href="/facts/new"><button>Submit a fact</button></a>
-        </div>
-        <div class="footer">
-            <h2>Contact Us</h2>
-            <p>PetFax Animal Shelter
-                123 Paws Lane
-                Furryville, NV 89118
-                (555) 123-4567
-            </p>
-            <div class="socials-footer">
-                <p>Socials here</p>
-            </div>
-        </div>
+      {% for pet in pets %}
+      <div class="pet-card">
+        <img class="pet-img" src="{{pet.pet_photo}}" alt="Photo of pet" />
+        <p>{{ pet.pet_name }}</p>
+        <a href="/pets">Learn more</a>
+      </div>
+      {% endfor %}
     </div>
-</body>
+    <div class="fun-facts-container">
+    <h2>Check out these fun animal facts</h2>
+    <a href="/facts"><button>Facts</button></a>
+    </div>
+    <div class="fun-fact-submit-container">
+    <h2>Have an animal fun fact you'd like to share with us?</h2>
+    <a href="/facts/new"><button>Submit a fact</button></a>
+    </div>
+    <div class="footer">
+    <h2>Contact Us</h2>
+    <p>
+        PetFax Animal Shelter 123 Paws Lane Furryville, NV 89118 (555)
+        123-4567
+    </p>
+    <div class="socials-footer">
+        <p>Socials here</p>
+    </div>
+    </div>
+  </body>
 </html>
