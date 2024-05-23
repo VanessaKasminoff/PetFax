@@ -10,5 +10,9 @@
         <a href="/">PetFax</a>
     </div>
     <h1>Animal Facts!</h1>
+    {% for fact in facts %}
+        <p>{{fact.fact}}</p>
+        <p>by {{fact.submitter}}</p>
+    {% endfor %}
 </body>
 </html>
